@@ -9,9 +9,21 @@ const App = () => {
  
   return (
     <div className="ui container comments">
-        <CommentDetail author="Sam" timeAgo="Today at 4:45PM" avatar={faker.image.avatar()} usrComment="Eat poo!" />
-        <CommentDetail author="Alex"  timeAgo="Today at 2:00AM" avatar={faker.image.avatar()} usrComment="That's fan-fucking-tastic!"  />
-        <CommentDetail author="Jane"  timeAgo="Yesterday at 5:00PM" avatar={faker.image.avatar()} usrComment="I eat potatoes."  />
+        <CommentDetail 
+            author="Sam" 
+            timeAgo="Today at 4:45PM" 
+            avatar={faker.image.avatar()} 
+            usrComment="Eat poo!" />
+        <CommentDetail 
+            author="Alex"  
+            timeAgo="Today at 2:00AM" 
+            avatar={faker.image.avatar()} 
+            usrComment="That's fan-fucking-tastic!"  />
+        <CommentDetail 
+            author="Jane"  
+            timeAgo="Yesterday at 5:00PM" 
+            avatar={faker.image.avatar()} 
+            usrComment="I eat potatoes."  />
     </div>
   ); 
 };
