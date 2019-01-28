@@ -18,16 +18,22 @@ const App = () => {
                 usrComment="Eat poo!" 
             />
         </ApprovalCard>
-        <CommentDetail 
-            author="Alex"  
-            timeAgo="Today at 2:00AM" 
-            avatar={faker.image.avatar()} 
-            usrComment="That's fan-fucking-tastic!"  />
-        <CommentDetail 
-            author="Jane"  
-            timeAgo="Yesterday at 5:00PM" 
-            avatar={faker.image.avatar()} 
-            usrComment="I eat potatoes."  />
+        <ApprovalCard>
+            <CommentDetail 
+                author="Alex"  
+                timeAgo="Today at 2:00AM" 
+                avatar={faker.image.avatar()} 
+                usrComment="That's fan-fucking-tastic!"  
+            />
+        </ApprovalCard>
+        <ApprovalCard>
+            <CommentDetail 
+                author="Jane"  
+                timeAgo="Yesterday at 5:00PM" 
+                avatar={faker.image.avatar()} 
+                usrComment="I eat potatoes."  
+            />
+        </ApprovalCard>
     </div>
   ); 
 };
