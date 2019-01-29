@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SeasonDisplay from './SeasonDisplay';
+import Spinner from './Spinner';
+import ErrorMessage from './ErrorMessage';
 
 class App extends React.Component {
     state = { lat: null, errorMessage: '' };
@@ -15,14 +17,14 @@ class App extends React.Component {
     //react says we have to define render!!
    render() {
      if (this.state.errorMessage && !this.state.lat) {
-         return <div>Error : {this.state.errorMessage}</div>;
+         return <ErrorMessage message={this.state.errorMessage} />;
      }
 
      if (!this.state.errorMessage && this.state.lat) {
          return <SeasonDisplay lat={this.state.lat} />;
      }
 
-     return <div>Hold yer horses mister!</div>
+     return <Spinner />
     }
 }
 
