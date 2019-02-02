@@ -5,13 +5,16 @@ import Spinner from './Spinner';
 import ErrorMessage from './ErrorMessage';
 
 class App extends React.Component {
-    state = { lat: null, errorMessage: '' };
+    state = { lat: null, errorMessage: '', time: new Date().toLocaleTimeString() };
 
     componentDidMount() {
         window.navigator.geolocation.getCurrentPosition(
             (position) => this.setState({ lat: position.coords.latitude }),
             (err) => this.setState({ errorMessage: err.message })
         );
+        setInterval(() => {
+            this.setState({time: new Date().toLocaleTimeString()})
+        }, 1000)
     }
 
     renderContent() {
@@ -30,7 +33,9 @@ class App extends React.Component {
     //react says we have to define render!!
    render() {
      return (
-        <div>{this.renderContent()}</div>
+        <div>
+            {this.renderContent()}
+        </div>
     );
     }
 }
