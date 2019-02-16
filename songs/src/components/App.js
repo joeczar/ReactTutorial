@@ -5,7 +5,7 @@ const App = () => {
     return(
         <div className="ui container grid">
             <div className="ui row">
-                <div classname="column eight wide">
+                <div className="column eight wide">
                     <SongList />
                 </div>
             </div>   
